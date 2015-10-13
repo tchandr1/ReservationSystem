@@ -1,0 +1,12 @@
+edu\iit\sat\egen\restaurantreservationbackend\Customer.class
+edu\iit\sat\egen\restaurantreservationbackend\service\OwnerFacadeREST.class
+edu\iit\sat\egen\restaurantreservationbackend\Owner_.class
+edu\iit\sat\egen\restaurantreservationbackend\service\AbstractFacade.class
+edu\iit\sat\egen\restaurantreservationbackend\Customer_.class
+edu\iit\sat\egen\restaurantreservationbackend\service\ApplicationConfig.class
+edu\iit\sat\egen\restaurantreservationbackend\service\TablereserveFacadeREST.class
+edu\iit\sat\egen\restaurantreservationbackend\service\CustomerFacadeREST.class
+edu\iit\sat\egen\restaurantreservationbackend\Tablereserve_.class
+edu\iit\sat\egen\restaurantreservationbackend\service\NewCrossOriginResourceSharingFilter.class
+edu\iit\sat\egen\restaurantreservationbackend\Tablereserve.class
+edu\iit\sat\egen\restaurantreservationbackend\Owner.class
