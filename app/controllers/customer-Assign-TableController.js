@@ -8,7 +8,7 @@
     'use strict';
     angular.module('restaurant')
         .controller("CustomerAssignTable",CustomerAssignTableFn)
-        .factory("CustomerAssignTableFactory",CustomerAssignTableFactoryFn)
+
 
     var reserved = [];
     CustomerAssignTableFn.$inject = ['CustomerAssignTableFactory'];
@@ -98,21 +98,5 @@
 
     }
 
-    function CustomerAssignTableFactoryFn(){
-        var reservedSeats = [];
-        return{
-            reservedTable:function(reserved){
-                reservedSeats.push(reserved);
-                console.log("FactoryReservedSeats:"+reservedSeats);
-            },
-            getData:function(){
-                return reservedSeats;
-
-            },
-            getLength:function(){
-                return reservedSeats.length;
-            }
-        }
-    }
 
 })();

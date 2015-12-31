@@ -4,15 +4,12 @@
 (function(){
     angular.module('restaurant')
         .controller('CustomerReserveTableController',CustomerReserveTableControllerFn)
-        .factory('CustomersDisplayFactory');
 
-    CustomerReserveTableControllerFn.$inject = ['CustomersDisplayFactory','$routeParams'];
-    function CustomerReserveTableControllerFn(CustomersDisplayFactory,$routeParams){
+
+    CustomerReserveTableControllerFn.$inject = ['$routeParams'];
+    function CustomerReserveTableControllerFn($routeParams){
         var crVm = this;
         console.log("Entered CustomerReserveTableController");
-
-
-
 
     }
 

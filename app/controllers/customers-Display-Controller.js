@@ -4,10 +4,7 @@
 (function(){
     angular.module('restaurant')
         .controller("CustomersDisplayController",CustomersDisplayControllerFn)
-        .factory("CustomersDisplayFactory",CustomersDisplayFactoryFn)
-        .factory("UpdatedCustomersDisplayFactory",UpdatedCustomersDisplayFactoryFn)
-        .factory("CustomerDatabase",CustomerDatabaseFactoryFn)
-        .factory("CustomerAssignTableFactory");
+
 
     CustomersDisplayControllerFn.$inject = ['CustomersDisplayFactory','UpdatedCustomersDisplayFactory','CustomerAssignTableFactory','CustomerDatabase'];
     function CustomersDisplayControllerFn(CustomersDisplayFactory,UpdatedCustomersDisplayFactory,CustomerAssignTableFactory,CustomerDatabase) {
@@ -142,54 +139,6 @@
         }
 
     }
-
-    function CustomersDisplayFactoryFn() {
-        var custData ;
-        var custDataArray = [];
-        return {
-            updatedData: function (newData) {
-                console.log("CustomersDisplayFactoryFn Entered");
-                custData = newData;
-                custDataArray.push(custData);
-                console.log("Factory forms:"+custDataArray);
-            },
-
-            getData: function () {
-                console.log("CustomersDisplayFactoryFn Entered");
-                return custDataArray;
-            }
-        }
-    }
-
-    function UpdatedCustomersDisplayFactoryFn() {
-        var updatecustData;
-        var updatecustDataArray = [];
-
-        return {
-            updatedData: function (newData) {
-                console.log("UpdatedCustomersDisplayFactoryFn Entered");
-                updatecustData = newData;
-
-            },
-
-            getData: function () {
-                console.log("GET UpdatedCustomersDisplayFactoryFn Entered");
-                return updatecustData;
-            }
-        }
-    }
-
-    CustomerDatabaseFactoryFn.$inject = ['$resource']
-    function CustomerDatabaseFactoryFn($resource){
-        console.log("CustomerDataFactory from Database Entered");
-        return $resource('http://localhost:8080/RestaurantReservationBackend/webresources/customers',{},{
-            query: {
-                method:'GET', isArray:true
-            }
-        });
-    }
-
-
 
 
 })();
